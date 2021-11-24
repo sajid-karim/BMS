@@ -96,7 +96,6 @@ selenium==3.141.0
 Send2Trash==1.5.0
 serpent==1.40
 simplejson==3.16.0
-sip==4.19.21
 six==1.14.0
 sqlparse==0.4.1
 ssim==0.3.0

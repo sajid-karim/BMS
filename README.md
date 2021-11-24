@@ -1,2 +1,1 @@
-# BMS
-Bank Management System
+# Bank-Database-Management-System

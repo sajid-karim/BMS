@@ -2,15 +2,11 @@ from django.db import models
 
 # Create your models here.
 class customer(models.Model):
-    
-    name = models.CharField(max_length=122, null = True)
-    email =models.CharField(max_length=122, null = True)
-    phone = models.CharField(max_length=15, null= True)
-    cnic = models.CharField(max_length=122, null = True)
-    password =models.CharField(max_length=122, null = True)
-
-    def __str__(self):
-        return self.email
+    name = models.CharField(max_length=122)
+    email =models.CharField(max_length=122)
+    phone = models.CharField(max_length=15)
+    cnic = models.CharField(max_length=20)
+    username = models.CharField(primary_key=True, max_length=122)
 
 
 
@@ -19,5 +15,9 @@ class Contact(models.Model):
     email =models.CharField(max_length=122, null = True)
     message=models.TextField(null = True)
 
-    def __str__(self):
-        return self.name
+
+
+class Account(models.Model):
+    Accno = models.IntegerField(primary_key=True)
+    Owner = models.ForeignKey(customer, on_delete=models.CASCADE,)
+    Balance = models.FloatField(default=0)

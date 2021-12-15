@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from home import views
+app_name = "home"
 urlpatterns = [
     path("",views.home,name= 'home'),
     path("about",views.about, name="about"),
@@ -8,6 +9,6 @@ urlpatterns = [
     path("contact",views.contact, name="contact"),
     path("faqs", views.faqs, name="faqs"),
     path("signup",views.signup, name="signup"),
-    path("login", views.login, name="login")
-
+    path("signin", views.signin, name="signin"),    
+    path('signout',views.signout, name='signout'),
 ]
